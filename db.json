@@ -59,6 +59,26 @@
       "date": "asdf",
       "time": "asdf",
       "organizer": "Felix"
+    },
+    {
+      "id": "f0bf52de-c4c2-48fd-a3f5-14eb4f86217a",
+      "category": "education",
+      "title": "sfasf",
+      "description": "asdf",
+      "location": "asdf",
+      "date": "asdf",
+      "time": "aaas",
+      "organizer": "Felix"
+    },
+    {
+      "id": "7e983c99-0ed8-4942-bde8-a5f49556388b",
+      "category": "nature",
+      "title": "234",
+      "description": "asdf",
+      "location": "",
+      "date": "",
+      "time": "",
+      "organizer": "Felix"
     }
   ]
 }
