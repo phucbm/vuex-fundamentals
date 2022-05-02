@@ -87,6 +87,12 @@ export default {
               }
             })
           })
+          .catch(error => {
+            this.$router.push({
+              name: 'ErrorDisplay',
+              params: {error: error}
+            })
+          })
     },
   },
 };

@@ -3,3 +3,8 @@
     <h1>The events site for a better world</h1>
   </div>
 </template>
+<script>
+export default {
+  name: "About"
+}
+</script>
