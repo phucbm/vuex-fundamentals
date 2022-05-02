@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     events(){
-      return this.$store.state.events;
+      return this.$store.state.event.events;
     }
   }
 };

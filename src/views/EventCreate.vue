@@ -75,7 +75,7 @@ export default {
       const event = {
         ...this.event,
         id: uuidv4(),
-        organizer: this.$store.state.user
+        organizer: this.$store.state.user.userInfo.name
       };
 
       this.$store.dispatch('createEvent', event)
