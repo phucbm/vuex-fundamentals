@@ -1,13 +1,15 @@
 <template>
-  <div v-if="event">
-    <h1>{{ event.title }}</h1>
-    <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
-    <p>{{ event.description }}</p>
-    <p>Organized by {{ event.organizer }}</p>
+  <div v-if="event.currentEvent">
+    <h1>{{ event.currentEvent.title }}</h1>
+    <p>{{ event.currentEvent.time }} on {{ event.currentEvent.date }} @ {{ event.currentEvent.location }}</p>
+    <p>{{ event.currentEvent.description }}</p>
+    <p>Organized by {{ event.currentEvent.organizer }}</p>
   </div>
 </template>
 
 <script>
+import {mapState} from "vuex";
+
 export default {
   props: ["id"],
   created(){
@@ -20,9 +22,7 @@ export default {
         })
   },
   computed: {
-    event(){
-      return this.$store.state.event.currentEvent;
-    }
+    ...mapState(['event'])
   }
 };
 </script>
