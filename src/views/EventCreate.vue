@@ -1,6 +1,5 @@
 <template>
   <h1>Create an event</h1>
-
   <div class="form-container">
     <form @submit.prevent="onSubmit">
       <label>Select a category: </label>
@@ -74,11 +73,14 @@ export default {
   },
   methods: {
     onSubmit(){
-      this.event.id = uuidv4();
-      this.event.organizer = this.$store.state.user;
+      const event = {
+        ...this.event,
+        id: uuidv4(),
+        organizer: this.$store.state.user
+      };
 
-      EventService.postEvent(this.event).then(() => {
-
+      EventService.postEvent(event).then(() => {
+        this.$store.commit('ADD_EVENT', event);
       }).catch(error => {
         console.log(error)
       });
