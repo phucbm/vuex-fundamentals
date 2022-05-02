@@ -79,6 +79,26 @@
       "date": "",
       "time": "",
       "organizer": "Felix"
+    },
+    {
+      "id": "04e2e81b-5248-48d2-82b4-b6d0fa1d0b9f",
+      "category": "housing",
+      "title": "Helloasdf",
+      "description": "asf",
+      "location": "asdf",
+      "date": "asdf",
+      "time": "asdf",
+      "organizer": "Felix"
+    },
+    {
+      "id": "8416324f-9d6e-42cf-85ae-91ef59d481f4",
+      "category": "food",
+      "title": "Router",
+      "description": "asdf",
+      "location": "asdf",
+      "date": "asdf",
+      "time": "asdf",
+      "organizer": "Felix"
     }
   ]
 }
