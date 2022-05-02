@@ -8,12 +8,15 @@
 </template>
 
 <script>
-import {mapState} from "vuex";
+import {mapActions, mapState} from "vuex";
 
 export default {
   props: ["id"],
+  methods: {
+    ...mapActions(['fetchEvent']),
+  },
   created(){
-    this.$store.dispatch('fetchEvent', this.id)
+    this.fetchEvent(this.id)
         .catch(error => {
           this.$router.push({
             name: 'ErrorDisplay',

@@ -8,15 +8,18 @@
 <script>
 // @ is an alias to /src
 import EventCard from "@/components/EventCard";
-import {mapState} from "vuex";
+import {mapActions, mapState} from "vuex";
 
 export default {
   name: "EventList",
   components: {
     EventCard,
   },
+  methods: {
+    ...mapActions(['fetchEvents']),
+  },
   created(){
-    this.$store.dispatch('fetchEvents')
+    this.fetchEvents()
         .catch(error => {
           this.$router.push({
             name: 'ErrorDisplay',
